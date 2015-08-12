@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/alireza-saberi/customer-application#readme",
   "devDependencies": {
+    "angular": "^1.4.3",
+    "bower": "^1.4.1",
     "grunt": "^0.4.5"
   }
 }
