@@ -24,22 +24,20 @@
         <h1>Hello, world</h1>
         <form>
         <div ng-hide="isHidden">
-          Filter: <input type="text" data-ng-model="name">
+          Filter: <input type="text" data-ng-model="customerFilter.name">
         </div>
-        Hide: <input type="checkbox" data-ng-model="isHidden">
-        <br>{{name}}
-        <button  class="btn btn-default">Change Name</button>
+        <br>
         </form>
         <br>
         <table class="table table-striped table-hover table-responsive">
           <tr>
             <th>#</th>
-            <th>Name</th>
-            <th>City</th>
-            <th>Order Total</th>
-            <th>Joined</th>
+            <th ng-click="sortBy='name';reverse != reverse">Name</th>
+            <th ng-click="sortBy='city';reverse != reverse">City</th>
+            <th ng-click="sortBy='order';reverse != reverse">Order Total</th>
+            <th ng-click="sortBy='joined';reverse != reverse">Joined</th>
           </tr>
-          <tr ng-repeat="person in people">
+          <tr ng-repeat="person in people | filter:customerFilter | orderBy:sortBy:reverse">
             <td>{{$index}}</td>
             <td>{{person.name | uppercase}}</td>
             <td>{{person.city}}</td>
