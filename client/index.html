@@ -28,11 +28,11 @@
         Hide: <input type="checkbox" ng-model="isHidden">
         <br>{{name}}
         <button>Change Name</button>
-        <table class="table">
+        <table class="table table-striped table-hover">
           <tr>
-            <td>#</td>
-            <td>Name</td>
-            <td>City</td>
+            <th>#</th>
+            <th>Name</th>
+            <th>City</th>
           </tr>
           <tr ng-repeat="person in people">
             <td>{{$index}}</td>
