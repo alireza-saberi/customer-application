@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-ng-app lang="en">
+<html ng-app="customersApp" lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,9 +16,9 @@
     <![endif]-->
     <!-- Font-Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <link href="css/main.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
   </head>
-  <body ng-init="people=[{name: 'Ali', city: 'Montreal', order:9.9956, joined:'2008-12-02'}, {name: 'Reza', city: 'Vancouver', order:12.3, joined:'2000-01-02'}, {name: 'Hassan', city:'Toronto', order:3.45, joined:'1964-12-02'}, {name: 'Amir', city:'Montreal', order:0.23, joined:'2015-12-02'}, {name: 'Zohreh', city:'Montreal', order:79.6347, joined:'2010-02-21'}, {name:'Azadeh', city:'Montreal', order:9657.56, joined:'1985-02-20'}]">
+  <body ng-controller="CustomersController">
     <div class="container">
       <div class="row" ng-cloack>
         <h1>Hello, world</h1>
@@ -37,12 +37,12 @@
             <th ng-click="sortBy='order';reverse != reverse">Order Total</th>
             <th ng-click="sortBy='joined';reverse != reverse">Joined</th>
           </tr>
-          <tr ng-repeat="person in people | filter:customerFilter | orderBy:sortBy:reverse">
+          <tr ng-repeat="cust in customers | filter:customerFilter | orderBy:sortBy:reverse">
             <td>{{$index}}</td>
-            <td>{{person.name | uppercase}}</td>
-            <td>{{person.city}}</td>
-            <td>{{person.order | currency}}</td>
-            <td>{{person.joined | date}}</td>
+            <td>{{cust.name | uppercase}}</td>
+            <td>{{cust.city}}</td>
+            <td>{{cust.orderTotal | currency}}</td>
+            <td>{{cust.joined | date}}</td>
           </tr>
         </table>
         <hr class="color-violet">
@@ -52,6 +52,8 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
         <script src="js/angular.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/controllers/customersController.js"></script>
       </div>
     </div>
   </body>
