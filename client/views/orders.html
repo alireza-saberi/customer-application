@@ -9,10 +9,10 @@
             <th >Total</th>
           </tr>
           <tr ng-repeat="order in orders">
-            <td>{{$index}}</td>
+            <td>{{$index + 1 }}</td>
             <td>{{order.product}}</td>
             <td>{{order.total | currency}}</td>
-          </tr>s
+          </tr>
         </table>
 
     </div>

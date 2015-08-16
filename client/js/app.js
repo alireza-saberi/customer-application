@@ -9,9 +9,9 @@
     				controller:'CustomersController',
     				templateUrl:'views/customers.html'
     			})
-    		.when('/orders/customerId',{
+    		.when('/orders/:customerId',{
     				controller: 'OrdersController',
-    				templateURL:'views/orders.html'
+    				templateUrl:'views/orders.html'
     		})
     		.otherwise({ redirectTo: '/'});
 
