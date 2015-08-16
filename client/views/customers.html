@@ -16,6 +16,7 @@
             <th ng-click="doSort('city')">City</th>
             <th ng-click="doSort('orderTotal')">Order Total</th>
             <th ng-click="doSort('joined')">Joined</th>
+            <th>View Order</th>
           </tr>
           <tr ng-repeat="cust in customers | filter:customerFilter | orderBy:sortBy:reverse">
             <td>{{$index}}</td>
@@ -23,6 +24,7 @@
             <td>{{cust.city}}</td>
             <td>{{cust.orderTotal | currency}}</td>
             <td>{{cust.joined | date}}</td>
+            <td><a href="#/orders/{{ cust.id }}" class="color-violet"><i class="fa fa-shopping-cart"></i></a></td>
           </tr>s
         </table>
         <span>Total customers: {{ customers.length}}</span>
