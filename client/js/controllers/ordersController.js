@@ -1,9 +1,9 @@
 (function() {
     
-    var OrdersController = function ($scope, $routeParams) {
+    var OrdersController = function ($scope, $stateParams) {
 
         // $routeParams.customerId comes from  routing configuration customerId after PATH       
-        var customerId = $routeParams.customerId;
+        var customerId = $stateParams.customerId;
         $scope.orders = null;
         function init() {
             //Search the customers for the customerId

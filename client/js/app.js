@@ -1,19 +1,23 @@
+'use strict';
 (function() {
     
     var app = angular.module('customersApp', ['ui.router']);
 
-    app.config(function($routeProvider){
-    	$routeProvider
-    		.when('/',
+    app.config(function($stateProvider, $urlRouterProvider){
+    	
+    	$urlRouterProvider.otherwise("/")
+    	$stateProvider
+    		.state('home',
     			{
+    				url:'/',
     				controller:'CustomersController',
     				templateUrl:'views/customers.html'
     			})
-    		.when('/orders/:customerId',{
+    		.state('order',{
+    				url:'/order/:customerId',
     				controller: 'OrdersController',
     				templateUrl:'views/orders.html'
-    		})
-    		.otherwise({ redirectTo: '/'});
+    		});
 
     });
     

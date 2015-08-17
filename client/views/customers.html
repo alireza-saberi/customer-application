@@ -1,3 +1,4 @@
+    <!-- views/customers.html -->
     <div class="container">
       <div class="row" ng-cloack>
         <h2>Customers</h2>
@@ -24,7 +25,7 @@
             <td>{{cust.city}}</td>
             <td>{{cust.orderTotal | currency}}</td>
             <td>{{cust.joined | date}}</td>
-            <td><a href="#/orders/{{ cust.id }}" class="color-violet"><i class="fa fa-shopping-cart"></i></a></td>
+            <td><a ui-sref="order({ customerId: cust.id })" class="color-violet"><i class="fa fa-shopping-cart"></i></a></td>
           </tr>
         </table>
         <span>Total customers: {{ customers.length}}</span>
