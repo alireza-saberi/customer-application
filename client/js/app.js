@@ -1,6 +1,6 @@
 (function() {
     
-    var app = angular.module('customersApp', ['ngRoute']);
+    var app = angular.module('customersApp', ['ui.router']);
 
     app.config(function($routeProvider){
     	$routeProvider

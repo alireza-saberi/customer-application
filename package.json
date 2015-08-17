@@ -19,6 +19,7 @@
   "devDependencies": {
     "angular": "^1.4.3",
     "angular-route": "^1.4.4",
+    "angular-ui-router": "^0.2.15",
     "bower": "^1.4.1",
     "grunt": "^0.4.5",
     "python": "0.0.4"
