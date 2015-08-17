@@ -1,11 +1,11 @@
 (function() {
     
     var OrdersController = function ($scope, $stateParams) {
-
         // $routeParams.customerId comes from  routing configuration customerId after PATH       
-        var customerId = $stateParams.customerId;
+        // var customerId = $stateParams.customerId;
         $scope.orders = null;
         function init() {
+            var customerId = $stateParams.customerId;
             //Search the customers for the customerId
             for (var i=0,len=$scope.customers.length;i<len;i++) {
                if ($scope.customers[i].id === parseInt(customerId)) {
@@ -28,7 +28,7 @@
         init();
     };
     
-    OrdersController.$inject = ['$scope', '$routeParams'];
+    OrdersController.$inject = ['$scope', '$stateParams'];
 
     angular.module('customersApp')
       .controller('OrdersController', OrdersController);

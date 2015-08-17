@@ -1,4 +1,3 @@
-'use strict';
 (function() {
     
     var app = angular.module('customersApp', ['ui.router']);
