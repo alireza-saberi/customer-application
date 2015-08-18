@@ -13,10 +13,10 @@
         <table class="table table-striped table-hover table-responsive">
           <tr>
             <th>#</th>
-            <th ng-click="doSort('name')">Name</th>
-            <th ng-click="doSort('city')">City</th>
-            <th ng-click="doSort('orderTotal')">Order Total</th>
-            <th ng-click="doSort('joined')">Joined</th>
+            <th data-ng-click="doSort('name')">Name</th>
+            <th data-ng-click="doSort('city')">City</th>
+            <th data-ng-click="doSort('orderTotal')">Order Total</th>
+            <th data-ng-click="doSort('joined')">Joined</th>
             <th>View Order</th>
           </tr>
           <tr ng-repeat="cust in customers | filter:customerFilter | orderBy:sortBy:reverse">
