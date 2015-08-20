@@ -1,9 +1,12 @@
 (function() {
     
     var app = angular.module('customersApp', ['ui.router']);
-    app.value('appSettings', {
+    app.constant('appSettings', {
         title:'Customer Application',
         version:'1.0'
+    });
+    app.controller('footercontroller', function($scope, appSettings){
+        $scope.appSettings = appSettings;
     });
     app.config(function($stateProvider, $urlRouterProvider){
     	

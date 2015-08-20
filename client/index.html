@@ -21,9 +21,8 @@
   <body>
         <!--div data-ng-view></div -->
         <div ui-view></div>
-
         <hr class="color-violet">
-        <footer class="text-center"> MADE WITH <i class="fa fa-heart color-violet"></i> BY <span class="color-violet">ALAN SABERI</span>. FIND THIS ON <a href="https://github.com/alireza-saberi/customer-application" target="_bank"><span class="color-violet">GITHUB</span></a></footer>
+        <footer class="text-center" ng-controller="footercontroller"> MADE WITH <i class="fa fa-heart color-violet"></i> BY <span class="color-violet">ALAN SABERI</span>. FIND THIS ON <a href="https://github.com/alireza-saberi/customer-application" target="_bank"><span class="color-violet">GITHUB</span></a><div>version :{{appSettings.version}}</div></footer>
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
