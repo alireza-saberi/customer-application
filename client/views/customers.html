@@ -1,7 +1,8 @@
     <!-- views/customers.html -->
     <div class="container">
       <div class="row" ng-cloack>
-        <h2>Customers</h2>
+        <h2>{{ appSettings.title }}</h2>
+        <h6 class="text-right">Version: {{appSettings.version}}</h6>
         <br>
         <form>
         <div class="form-group">
@@ -29,5 +30,4 @@
           </tr>
         </table>
         <span>Total customers: {{ customers.length}}</span>
-
     </div>

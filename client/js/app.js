@@ -1,7 +1,10 @@
 (function() {
     
     var app = angular.module('customersApp', ['ui.router']);
-
+    app.value('appSettings', {
+        title:'Customer Application',
+        version:'1.0'
+    });
     app.config(function($stateProvider, $urlRouterProvider){
     	
     	$urlRouterProvider.otherwise("/")
