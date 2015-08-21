@@ -18,6 +18,7 @@
   "homepage": "https://github.com/alireza-saberi/customer-application#readme",
   "devDependencies": {
     "angular": "^1.4.3",
+    "angular-animate": "^1.4.4",
     "angular-route": "^1.4.4",
     "angular-ui-router": "^0.2.15",
     "bower": "^1.4.1",

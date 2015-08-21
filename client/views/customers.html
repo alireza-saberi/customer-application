@@ -18,15 +18,17 @@
             <th data-ng-click="doSort('orderTotal')">Order Total</th>
             <th data-ng-click="doSort('joined')">Joined</th>
             <th>View Order</th>
+            <th>&nbsp;</th>
           </tr>
-          <tr ng-repeat="cust in customers | filter:customerFilter | orderBy:sortBy:reverse">
+          <tr ng-repeat="cust in customers | filter:customerFilter | orderBy:sortBy:reverse" class="repeat-animation">
             <td>{{$index + 1 }}</td>
             <td>{{cust.name | uppercase}}</td>
             <td>{{cust.city}}</td>
             <td>{{cust.orderTotal | currency}}</td>
             <td>{{cust.joined | date}}</td>
             <td><a ui-sref="order({ customerId: cust.id })" class="color-violet"><i class="fa fa-shopping-cart"></i></a></td>
+            <td><a class="color-violet"><i class="fa fa-trash-o" data-ng-click="deleteCustomer(cust.id)"></i></a></td>
           </tr>
         </table>
-        <span>Total customers: {{ customers.length}}</span>
+        <span>Total customers: {{ customers.length }}</span>
     </div>

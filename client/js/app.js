@@ -1,11 +1,11 @@
 (function() {
     
-    var app = angular.module('customersApp', ['ui.router']);
+    var app = angular.module('customersApp', ['ui.router', 'ngAnimate']);
     app.constant('appSettings', {
         title:'Customer Application',
         version:'1.0'
     });
-    app.controller('footercontroller', function($scope, appSettings){
+    app.controller('footerController', function($scope, appSettings){
         $scope.appSettings = appSettings;
     });
     app.config(function($stateProvider, $urlRouterProvider){

@@ -18,6 +18,14 @@
                // return {};
             }
         };
+        cusfactory.deleteCustomer = function(customerId){
+            for(var i=0;len=customers.length;i<len){
+            if (customers[i].id === customerId) {
+              customers.splice(i,1);
+              break;
+            };
+           } 
+        };
         return cusfactory;
     };
     angular.module('customersApp').factory('customersFactory', customersFactory);
